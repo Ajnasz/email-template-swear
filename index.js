@@ -1,13 +1,13 @@
 /* jshint node: true */
 
 var path = require('path');
+var fs = require('fs');
 
 var Q = require('q');
 var walk = require('walk');
 var mime = require('mime');
-var emailTemplate = require('lib/email-template');
 
-var fs = require('fs');
+var emailTemplate = require('./lib/email-template');
 
 exports.render = function (templatesDir) {
 	'use strict';
