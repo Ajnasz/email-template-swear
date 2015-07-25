@@ -9,7 +9,7 @@ var mime = require('mime');
 
 var emailTemplate = require('./lib/email-template');
 
-exports.render = function (templatesDir) {
+exports.render = function (templatesDir, locals) {
 	'use strict';
 
 	var walker = walk.walk(templatesDir);
@@ -41,7 +41,8 @@ exports.render = function (templatesDir) {
 				type: mimeType,
 				webResources: {
 					relativeTo: path.dirname(file)
-				}
+				},
+				locals: locals
 			}))
 			.then(function (data) {
 				if (data !== null) {
