@@ -1,7 +1,7 @@
 {
-  "name": "juice-email",
-  "version": "1.0.0",
-  "description": "",
+  "name": "email-template-swear",
+  "version": "0.0.1",
+  "description": "Render email templates by promises",
   "main": "index.js",
   "dependencies": {
     "jade": "^1.11.0",
@@ -14,6 +14,30 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Lajos Koszti <ajnasz@ajnasz.hu>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ajnasz/email-template-swear.git"
+  },
+  "keywords": [
+    "email-template",
+    "email",
+    "template",
+    "jade",
+    "html",
+    "css",
+    "style",
+    "stylesheet",
+    "inline",
+    "stylesheet",
+    "render",
+    "email",
+    "template",
+    "renderer"
+  ],
+  "bugs": {
+    "url": "https://github.com/Ajnasz/email-template-swear/issues"
+  },
+  "homepage": "https://github.com/Ajnasz/email-template-swear"
 }
