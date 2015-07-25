@@ -1,4 +1,5 @@
 /* jshint node: true */
+'use strict';
 
 var fs = require('fs');
 var path = require('path');
@@ -8,7 +9,6 @@ require('./').render(process.argv[2], {
 		{name: 'Item name'}
 	]
 }).then(function (files) {
-	'use strict';
 	Object.keys(files).forEach(function (name) {
 		var outpuName = path.join(process.argv[3], name.replace(process.argv[2], '')) + '.out';
 		fs.writeFile(outpuName, files[name], function () {
