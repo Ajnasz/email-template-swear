@@ -1,4 +1,8 @@
-## EXample:
+## Email template swear
+
+Nodejs module to render email templates by promises
+
+## Example:
 
 ```
 require('email-template-swear').render('path/to/templates', {
