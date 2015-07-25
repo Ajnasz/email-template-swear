@@ -36,10 +36,13 @@ exports.render = function (templatesDir) {
 
 		++proc;
 
-		return Q.nfcall(fs.readFile, file)
-			.then(emailTemplate({type: mimeType, webResources: {
-				relativeTo: templatesDir
-			}}))
+		Q.nfcall(fs.readFile, file)
+			.then(emailTemplate({
+				type: mimeType,
+				webResources: {
+					relativeTo: path.dirname(file)
+				}
+			}))
 			.then(function (data) {
 				if (data !== null) {
 					files[file] = data;
