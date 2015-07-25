@@ -50,6 +50,10 @@ exports.render = function (templatesDir) {
 				--proc;
 				onEnd();
 				next();
+			}).fail(function (err) {
+				defer.reject(err);
+			}).catch(function (err) {
+				defer.reject(err);
 			});
 	});
 
